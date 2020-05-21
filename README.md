@@ -19,8 +19,9 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/)
-- [JWT](https://jwt.io/)
+- [Express](https://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)
+- [JWT](https://jwt.io/)
 
 ## 🤔 Como contribuir
 
