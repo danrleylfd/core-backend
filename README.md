@@ -36,7 +36,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
  - `git init`
  - `git add *`
  - `git commit -m "new commit"`
- - `git branch -M main`
+ - `git branch -M master`
  - `git remote add origin https://github.com/danrleylfd/core-backend.git`
  - `git push -u origin master`
 
