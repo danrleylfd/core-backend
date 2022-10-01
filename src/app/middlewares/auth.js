@@ -3,6 +3,7 @@ const { secret } = require("../../utils/services/auth");
 
 module.exports = (req, res, next) => {
   try {
+    req.query.id = undefined;
     const authHeader = req.headers.authorization;
     if(!authHeader) return res.status(401).json({ error: "No token provided." });
 
@@ -17,7 +18,7 @@ module.exports = (req, res, next) => {
       req.query.id = decoded.id;
       return next();
     });
-  } catch (err) {
-    return res.status(500).json({ error: err.message })
+  } catch (e) {
+    return res.status(500).json({ error: e.message })
   }
 };
