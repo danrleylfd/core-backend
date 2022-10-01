@@ -16,6 +16,6 @@ module.exports = async (req, res) => {
     await user.save();
     return res.status(206).json({ message: "Password changed successfully." });
   } catch (e) {
-    return res.status(400).json({ error: "Failed to change password, please try again.", code: e.message });
+    return res.status(400).json({ error: "Bad Request.", code: e.message });
   }
 }

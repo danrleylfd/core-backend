@@ -8,6 +8,6 @@ module.exports = async (req, res) => {
     if(!user) return res.status(404).json({ error: "User not found/exist." });
     return res.status(200).json({ user, message: "Success to get user." });
   } catch (e) {
-    return res.status(400).json({ error: "Sign In failed.", code: e.message });
+    return res.status(400).json({ error: "Bad Request.", code: e.message });
   }
 }

@@ -31,6 +31,6 @@ module.exports = async (req, res) => {
     });
     return res.status(200).json({ message: "Email successfully sent." });
   } catch (e) {
-    return res.status(400).json({ error: "Error sending email, please try again.", code: e.message });
+    return res.status(400).json({ error: "Bad Request.", code: e.message });
   }
 }

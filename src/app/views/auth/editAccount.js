@@ -23,6 +23,6 @@ module.exports = async (req, res) => {
       message: "Account successfully edited."
     });
   } catch (e) {
-    return res.status(400).json({ error: "Failed to edit account.", code: e.message });
+    return res.status(400).json({ error: "Bad Request.", code: e.message });
   }
 }

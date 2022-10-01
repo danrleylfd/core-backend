@@ -19,6 +19,6 @@ module.exports = async (req, res) => {
       message: "Success to Sign In."
     });
   } catch (e) {
-    return res.status(400).json({ error: "Sign In failed.", code: e.message });
+    return res.status(400).json({ error: "Bad Request.", code: e.message });
   }
 }

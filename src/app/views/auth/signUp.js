@@ -18,6 +18,6 @@ module.exports = async (req, res) => {
       message: "Success to Sign Up."
     });
   } catch (e) {
-    return res.status(400).json({ error: "Sign Up failed.", code: e.message });//500
+    return res.status(400).json({ error: "Bad Request.", code: e.message });//500
   }
 }
