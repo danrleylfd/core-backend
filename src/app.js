@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.use(cors({ origin: "http://frontend:3333" }));
+app.use(cors({ origin: "http://localhost:3333" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
