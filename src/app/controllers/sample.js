@@ -1,12 +1,11 @@
-const express = require('express');
-const authMiddleware = require('../middlewares/auth');
+const { Router } = require("express");
+const routes = Router();
 
-const readMany = require('../views/sample/readMany');
-
-const routes = express.Router();
+const authMiddleware = require("../middlewares/auth");
+const readMany = require("../views/sample/readMany");
 
 routes.use(authMiddleware);
 
-routes.get('/', readMany);
+routes.get("/", readMany);
 
-module.exports = app => app.use('/samples', routes);
+module.exports = app => app.use("/samples", routes);

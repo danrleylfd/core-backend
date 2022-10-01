@@ -1,4 +1,4 @@
-const mongoose = require('../../utils/database');
+const mongoose = require("../../utils/database");
 
 const SampleSchema = new mongoose.Schema({
   name: {
@@ -7,9 +7,9 @@ const SampleSchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Sample', SampleSchema);
+module.exports = mongoose.model("Sample", SampleSchema);

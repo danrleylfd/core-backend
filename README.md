@@ -43,6 +43,8 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ## Env
  - `PORT=80`
  - `MONGODB_HOST="mongodb+srv://<Username>:<Password>@cluster0-gw6np.gcp.mongodb.net/<DBName>?retryWrites=true&w=majority"`
+ - `EMAIL="username@gmail.com"`
+ - `PASSWORD="password"`
 
 ## :memo: Licença
 
