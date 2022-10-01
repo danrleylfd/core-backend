@@ -7,9 +7,10 @@ module.exports = async (req, res) => {
     if(!name && name.length < 0) return res.status(422).json({ error: "name missing." });
     if(!email && email.length < 0) return res.status(422).json({ error: "email missing." });
     if(!password && password.length < 8) return res.status(422).json({ error: "password missing or too short." });
+    const avatarUrl = `https://ui-avatars.com/api/?name=${name.split(" ").join("+")}&background=random&size=512&rounded=true&format=png`;
     const _user = await User.findOne({ email });
     if(_user) return res.status(401).json({ error: "User already exists." });
-    const user = await User.create({ name, email, password });
+    const user = await User.create({ name, avatarUrl, email, password });
     user.password = undefined;
     return res.status(201).json({
       token: generateToken({ id: user._id }),
