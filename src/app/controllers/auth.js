@@ -17,6 +17,8 @@ routes.post("/forgot_password", forgotPassword);
 
 routes.post("/reset_password", resetPassword);
 
+routes.get("/", getUser);
+
 routes.get("/:id", getUser);
 
 routes.put("/", editAccount);

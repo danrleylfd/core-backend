@@ -1,12 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_HOST, {
-  // Deprecated //
-  // useNewUrlParser: true,
-  // useCreateIndex: true,
-  // useFindAndModify: true,
-  // useUnifiedTopology: true
-});
+mongoose.connect(process.env.MONGODB_HOST);
 
 mongoose.Promise = global.Promise;
 
